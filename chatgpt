@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高鐵訂票系統</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    label {
+      margin: 10px;
+    }
+    button {
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>高鐵訂票系統</h1>
+  <form>
+    <label>
+      車次：
+      <input type="text" id="trainNumber" required>
+    </label>
+    <label>
+      座位：
+      <input type="text" id="seatNumber" required>
+    </label>
+    <button type="button" onclick="bookTicket()">訂票</button>
+  </form>
+
+  <script>
+    function bookTicket() {
+      var trainNumber = document.getElementById("trainNumber").value;
+      var seatNumber = document.getElementById("seatNumber").value;
+      
+      // 此處應發送訂票請求至後端API，並處理返回的結果
+      console.log("訂票成功：車次 " + trainNumber + "，座位 " + seatNumber);
+    }
+  </script>
+</body>
+</html>
